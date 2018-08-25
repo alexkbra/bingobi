@@ -6,7 +6,9 @@
 package bingobi;
 
 import bingobi.logica.Crear;
+import bingobi.utilidad.Conexion;
 import java.util.Scanner;
+import javax.persistence.EntityManagerFactory;
 
 /**
  *
@@ -19,21 +21,25 @@ public class BingoBI {
      */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("1: creación Cartones \n 2: emular programacion");
+        EntityManagerFactory emf = Conexion.createEntityManagerFactory();
+        System.out.println("1: creación Cartones \n2: emular programacion");
         int op = sc.nextInt();
-        
-        Crear crear = new Crear();
-        switch(op){
-            case 1:
-                crear.crearTablasBingo();
-                break;
-            case 2:
-                
-            
+        try {
+            Crear crear = new Crear();
+            switch(op){
+                case 1:
+                    crear.crearTablasBingo(emf);
+                    break;
+                case 2:
+                    crear.crearProgramacion(emf);
+                    break;
+                default: 
+                       System.out.println("default");
+                    break;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        
-        
-            
     }
     
 }
