@@ -7,6 +7,7 @@
             <file>file:/C:/Users/kbra/Documents/NetBeansProjects/BingoBI/src/META-INF/persistence.xml</file>
             <file>file:/C:/Users/kbra/Documents/NetBeansProjects/BingoBI/src/bingobi/persistence/controllers/SedesJpaController.java</file>
             <file>file:/C:/Users/kbra/Documents/NetBeansProjects/BingoBI/src/bingobi/persistence/controllers/TipoBingosJpaController.java</file>
+            <file>file:/C:/Users/kbra/Documents/NetBeansProjects/BingoBI/src/bingobi/persistence/controllers/DiasJpaController.java</file>
             <file>file:/C:/Users/kbra/Documents/NetBeansProjects/BingoBI/src/bingobi/persistence/controllers/ProgramacionesJpaController.java</file>
             <file>file:/C:/Users/kbra/Documents/NetBeansProjects/BingoBI/src/bingobi/logica/util/DateUtil.java</file>
             <file>file:/C:/Users/kbra/Documents/NetBeansProjects/BingoBI/src/bingobi/BingoBI.java</file>

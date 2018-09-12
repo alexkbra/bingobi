@@ -22,16 +22,16 @@ public class BingoBI {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         EntityManagerFactory emf = Conexion.createEntityManagerFactory();
-        System.out.println("1: creación Cartones \n2: emular programacion");
+        System.out.println("1: update programations \n2: emular bingo");
         int op = sc.nextInt();
         try {
             Crear crear = new Crear();
             switch(op){
                 case 1:
-                    crear.crearTablasBingo(emf);
+                    crear.updateProgramation(emf);
                     break;
                 case 2:
-                    crear.crearProgramacion(emf);
+                    crear.emularBingo(emf);
                     break;
                 default: 
                        System.out.println("default");

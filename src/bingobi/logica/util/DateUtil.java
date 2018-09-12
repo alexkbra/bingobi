@@ -39,7 +39,7 @@ public class DateUtil {
         this.holidays.add("7:7");//Batalla de boyaca 7 de agosto
         this.holidays.add("11:8");//Maria inmaculada 8 de diciembre
         this.holidays.add("11:25");//Navidad 25 de diciembre
-        System.out.println(this.easterDay);
+        //System.out.println(this.easterDay);
         this.calculateEmiliani(0, 6);// Reyes magos 6 de enero
         this.calculateEmiliani(2, 19);//San jose 19 de marzo
         this.calculateEmiliani(5, 29);//San pedro y san pablo 29 de junio

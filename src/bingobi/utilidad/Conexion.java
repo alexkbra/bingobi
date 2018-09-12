@@ -15,7 +15,7 @@ import javax.persistence.Persistence;
 public class Conexion {
     
     public static EntityManagerFactory createEntityManagerFactory(){
-        return  Persistence.createEntityManagerFactory("BingoBIPU");
+        return  Persistence.createEntityManagerFactory("BingoPersistenceBIPU");
     }
     
 }

@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-  <persistence-unit name="BingoBIPU" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="BingoPersistenceBIPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
-    <class>bingobi.persistence.entities.Persona</class>
-    <class>bingobi.persistence.entities.TipoBingo</class>
-    <class>bingobi.persistence.entities.Horario</class>
-    <class>bingobi.persistence.entities.Cartone</class>
-    <class>bingobi.persistence.entities.Tabla</class>
-    <class>bingobi.persistence.entities.Sede</class>
-    <class>bingobi.persistence.entities.Programacion</class>
-    <class>bingobi.persistence.entities.ControlTbl</class>
-    <class>bingobi.persistence.entities.Dia</class>
-    <class>bingobi.persistence.entities.Bingo</class>
-    <class>bingobi.persistence.entities.Bingos</class>
-    <class>bingobi.persistence.entities.Horarios</class>
-    <class>bingobi.persistence.entities.Programaciones</class>
-    <class>bingobi.persistence.entities.Personas</class>
-    <class>bingobi.persistence.entities.ControlProgramación</class>
-    <class>bingobi.persistence.entities.Dias</class>
-    <class>bingobi.persistence.entities.Sedes</class>
-    <class>bingobi.persistence.entities.TipoBingos</class>
-    <class>bingobi.persistence.entities.Tablas</class>
-    <class>bingobi.persistence.entities.Cartones</class>
+    <class>persistence.entity.Personas</class>
+    <class>persistence.entity.Tablas</class>
+    <class>persistence.entity.Horarios</class>
+    <class>persistence.entity.TipoBingos</class>
+    <class>persistence.entity.Programaciones</class>
+    <class>persistence.entity.Bingos</class>
+    <class>persistence.entity.ControlProgramación</class>
+    <class>persistence.entity.Cartones</class>
+    <class>persistence.entity.ValorBingos</class>
+    <class>persistence.entity.TipoDocumento</class>
+    <class>persistence.entity.Sedes</class>
+    <class>persistence.entity.Dias</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bingobi?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bingobi"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value="root"/>
