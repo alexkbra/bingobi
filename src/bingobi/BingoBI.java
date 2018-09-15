@@ -22,7 +22,10 @@ public class BingoBI {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         EntityManagerFactory emf = Conexion.createEntityManagerFactory();
-        System.out.println("1: update programations \n2: emular bingo");
+        System.out.println("1: update programations "
+                + "\n2: emular bingo "
+                + "\n3: emular bingo contro"
+                + "\n3: emular bingo contro Ganador" );
         int op = sc.nextInt();
         try {
             Crear crear = new Crear();
@@ -33,6 +36,10 @@ public class BingoBI {
                 case 2:
                     crear.emularBingo(emf);
                     break;
+                case 3:
+                    crear.emularBingoControl(emf);
+                case 4:
+                    crear.emularBingoControlGanador(emf);
                 default: 
                        System.out.println("default");
                     break;

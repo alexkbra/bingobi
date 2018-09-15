@@ -165,4 +165,17 @@ public class CartonesJpaController implements Serializable {
         }
     }
     
+    public List<Cartones> getCartonesXTablas(Tablas idTabla) {
+        EntityManager em = getEntityManager();
+        try {
+            CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
+            Root<Cartones> rt = cq.from(Cartones.class);
+            cq.select(em.getCriteriaBuilder().equal(rt.get("idTabla"), idTabla));
+            Query q = em.createQuery(cq);
+            return ((List<Cartones>) q.getResultList());
+        } finally {
+            em.close();
+        }
+    }
+    
 }

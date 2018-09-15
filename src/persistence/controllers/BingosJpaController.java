@@ -223,4 +223,17 @@ public class BingosJpaController implements Serializable {
         }
     }
     
+    public List<Bingos> getBingosXProgramacion(Programaciones programacion) {
+        EntityManager em = getEntityManager();
+        try {
+            CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
+            Root<Bingos> rt = cq.from(Bingos.class);
+            cq.select(em.getCriteriaBuilder().equal(rt.get("idProgramacion"), programacion));
+            Query q = em.createQuery(cq);
+            return (List<Bingos>) q.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+    
 }

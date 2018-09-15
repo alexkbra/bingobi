@@ -165,4 +165,17 @@ public class ControlProgramaciónJpaController implements Serializable {
         }
     }
     
+    public ControlProgramación getControlProgramaciónCount(String numero) {
+        EntityManager em = getEntityManager();
+        try {
+            CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
+            Root<ControlProgramación> rt = cq.from(ControlProgramación.class);
+            cq.select(em.getCriteriaBuilder().equal(rt.get("numero") , numero));
+            Query q = em.createQuery(cq);
+            return ((ControlProgramación) q.getSingleResult());
+        } finally {
+            em.close();
+        }
+    }
+    
 }

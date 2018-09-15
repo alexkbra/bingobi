@@ -7,7 +7,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import persistence.entity.Programaciones;
 import persistence.entity.ValorBingos;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-09-11T22:42:59")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-09-14T22:03:12")
 @StaticMetamodel(TipoBingos.class)
 public class TipoBingos_ { 
 
